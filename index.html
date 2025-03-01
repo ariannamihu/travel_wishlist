@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Wishlist</title>
+    <link rel="icon" type="image/x-icon" href="/images/Pictogrammers-Material-Island.512.png">
     <link rel="stylesheet" href="wishlist.css">
 </head>
 <body>
@@ -12,6 +13,18 @@
             <a class="navbar-brand" href="#">Travel Wishlist</a>
         </div>
     </nav>
+
+    <input type="text" id="cityInput" placeholder="Enter a city name">
+    <button onclick="searchCity()">Search</button>
+    
+    <div id="results"></div>
+    
+    <script>
+        function searchCity() {
+            const city = document.getElementById("cityInput").value;
+            fetchDestination(city);
+        }
+    </script>
     
     <div class="container mt-4">
         <h1 class="text-center">Explore Destinations</h1>
@@ -24,7 +37,7 @@
     </div>
     
     <script src="wishlist.js">
-        
     </script>
+    <script src="geonames.js"></script>
 </body>
 </html>
