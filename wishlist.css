@@ -11,7 +11,7 @@ nav {
     padding: 10px 0;
 }
 
-.navbar-brand {
+.navbar-brand, .nav-link {
     color: white !important;
     font-size: 1.5rem;
     font-weight: bold;
