@@ -1,8 +1,9 @@
 const pexelsApiKey = "JMXTsU7ypc7hOg1U3PPTiwrhJz8eHazFoh0JTKxXOrrmJIWuLCDzEaek"; // Replace with your API key
+//changes to request
 
 async function fetchDestination(cityName) {
     const username = "ariannamihu"; // Replace with your GeoNames username
-    const url = `http://api.geonames.org/searchJSON?q=${cityName}&maxRows=1&username=${username}`;
+    const url = `https://secure.geonames.org/searchJSON?q=${cityName}&maxRows=1&username=${username}`;
 
     try {
         const response = await fetch(url);
