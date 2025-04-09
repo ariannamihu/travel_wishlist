@@ -3,27 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Wishlist</title>
+    <title>Contact Us</title>
     <link rel="icon" type="image/x-icon" href="/images/Pictogrammers-Material-Island.512.png">
     
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="wishlist.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            
-
-            <!-- Button for Small Screens to toggle the menu -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Navbar links (hidden on small screens) -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <!-- Travel Wishlist and Contact Us Links for large screens -->
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Travel Wishlist</a>
                     </li>
@@ -35,76 +28,33 @@
         </div>
     </nav>
 
-    
-    
-            <h2 class="text-center">Contact Us</h2>
-            <p class="text-center">Have a question or need assistance? Feel free to reach out to us!</p>
-    
-            <form action="submit_contact.php" method="POST" id="contactForm">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Your Name</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Your Email</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Your Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-    
+    <div class="container mt-4">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center">Have a question or need assistance? Feel free to reach out to us!</p>
+        
+        <form action="submit_contact.php" method="POST" id="contactForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <footer class="text-center mt-4">
+        <p>&copy; 2025 Travel Wishlist</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Contact</h1>
-  </header>
-
-  <main>
-    <form id="contact-form">
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" required />
-
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required />
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
-  </main>
-
-  <footer>
-    <p>&copy; 2025</p>
-  </footer>
-
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Your info has been submitted.');
-      this.reset();
-    });
-  </script>
 </body>
 </html>
