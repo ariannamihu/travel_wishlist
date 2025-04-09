@@ -4,12 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Travel Wishlist</title>
+  <link rel="icon" type="image/x-icon" href="/images/Pictogrammers-Material-Island.512.png">
+  
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
   <link rel="stylesheet" href="wishlist.css" />
 </head>
 <body>
-  <header>
-    <h1>My Travel Wishlist</h1>
-  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Travel Wishlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <main>
     <section class="form-section">
@@ -36,69 +55,18 @@
 
   <div id="thank-you-message" class="hidden" role="alert">Thanks for submitting!</div>
 
-  <footer>
+]  <footer>
     <p>&copy; 2025</p>
   </footer>
 
   <script type="module" src="app.js"></script>
   <script src="form.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Wishlist</title>
-    <link rel="icon" type="image/x-icon" href="/images/Pictogrammers-Material-Island.512.png">
-    <link rel="stylesheet" href="wishlist.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            
+  <script src="wishlist.js"></script>
+  <script src="geonames.js"></script>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Travel Wishlist</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <input type="text" id="cityInput" placeholder="Enter a city name">
-    <button onclick="searchCity()">Search</button>
-    
-    <div id="results"></div>
-    
-    <script>
-        function searchCity() {
-            const city = document.getElementById("cityInput").value;
-            fetchDestination(city);
-        }
-    </script>
-    
-    <div class="container mt-4">
-        <h1 class="text-center">Explore Destinations</h1>
-        <div class="row" id="destinations"></div>
-        
-        <h2 class="mt-5">Your Wishlist</h2>
-        <ul class="list-group" id="wishlist">
-            
-        </ul>
-    </div>
-    
-    <script src="wishlist.js">
-    </script>
-    <script src="geonames.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
