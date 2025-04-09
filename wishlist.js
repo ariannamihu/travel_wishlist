@@ -1,33 +1,35 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const destinations = [
-        { name: "Paris, France", description: "The city of love and lights." },
-        { name: "Kyoto, Japan", description: "Beautiful temples and cherry blossoms." },
-        { name: "New York, USA", description: "The city that never sleeps." }
-    ];
-    
-    const destinationContainer = document.getElementById("destinations");
-    const wishlistContainer = document.getElementById("wishlist");
-    
-    destinations.forEach(dest => {
-        const card = document.createElement("div");
-        card.classList.add("col-md-4");
-        card.innerHTML = `
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">${dest.name}</h5>
-                    <p class="card-text">${dest.description}</p>
-                    <button class="btn btn-primary" onclick="addToWishlist('${dest.name}')">Add to Wishlist</button>
-                </div>
-            </div>
+export async function fetchDestinations() {
+    try {
+      const response = await fetch('data.json');
+      const data = await response.json();
+  
+      const destinationList = document.querySelector('.destination-list');
+  
+      data.forEach(destination => {
+        const div = document.createElement('div');
+        div.classList.add('destination');
+        div.innerHTML = `
+          <h3>${destination.destination}</h3>
+          <p>${destination.country}</p>
+          <p>${destination.reason}</p>
         `;
-        destinationContainer.appendChild(card);
-    });
-    
-    window.addToWishlist = function(destinationName) {
-        const listItem = document.createElement("li");
-        listItem.classList.add("list-group-item");
-        listItem.textContent = destinationName;
-        wishlistContainer.appendChild(listItem);
-    };
-});
-   
+        destinationList.appendChild(div);
+      });
+  
+      const localDestinations = JSON.parse(localStorage.getItem('wishlist')) || [];
+      localDestinations.forEach(destination => {
+        const div = document.createElement('div');
+        div.classList.add('destination');
+        div.innerHTML = `
+          <h3>${destination.destination}</h3>
+          <p>${destination.country}</p>
+          <p>${destination.reason}</p>
+        `;
+        destinationList.appendChild(div);
+      });
+  
+    } catch (error) {
+      console.error('Error fetching destinations:', error);
+    }
+  }
+  

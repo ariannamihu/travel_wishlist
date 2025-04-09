@@ -1,118 +1,75 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-nav {
-    background: linear-gradient(90deg, #ff6f61, #ff4e50);
-    padding: 10px 0;
-}
-
-.navbar-brand {
-    color: white !important;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.navbar-brand:hover {
-    color: #ffd700 !important;
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-h1, h2 {
-    text-align: center;
-    color: #007bff;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#destinations .card {
-    margin-bottom: 20px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#destinations .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-#destinations .card-title {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #ff6f61;
-}
-
-#destinations .card-body {
-    background-color: #ffffff;
-    padding: 20px;
-    transition: background-color 0.3s ease;
-}
-
-#destinations .card-body:hover {
-    background-color: #f0f8ff;
-}
-
-#wishlist {
-    margin-top: 30px;
-}
-
-#wishlist .list-group-item {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#wishlist .list-group-item:hover {
-    background-color: #007bff;
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  header, footer {
+    background: #007acc;
     color: white;
-    transform: translateX(5px);
-}
-
-.wishlist-item-btn {
-    background-color: #28a745;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  form {
+    display: grid;
+    gap: 0.75rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  
+  input, textarea, button {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  button {
+    background: #007acc;
     color: white;
     border: none;
-    padding: 10px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 30px;
-    font-size: 1rem;
-    box-shadow: 0 5px 15px rgba(0, 128, 0, 0.3);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.wishlist-item-btn:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
-}
-
-.wishlist-item-btn:active {
-    transform: translateY(2px);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
+  }
+  
+  button:hover {
+    background: #005fa3;
+  }
+  
+  .destination-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .destination {
+    background: #fff;
+    padding: 1rem;
+    border-left: 4px solid #007acc;
+    border-radius: 4px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #thank-you-message {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background: #28a745;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Wishlist</title>
+    <link rel="stylesheet" href="wishlist.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Add a New Destination</h1>
+        <form id="wishlist-form">
+            <label for="destination">Destination Name:</label>
+            <input type="text" id="destination" required>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" required>
+
+            <label for="reason">Why visit:</label>
+            <textarea id="reason" required></textarea>
+
+            <button type="submit">Add to Wishlist</button>
+        </form>
+
+        <div id="thank-you-message" class="hidden">
+            <p>Thank you for adding to your wishlist!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Travel Wishlist</p>
+    </footer>
+
+    <script type="module" src="scripts/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+[
+    {
+        "destination": "Paris",
+        "country": "France",
+        "reason": "The Eiffel Tower and rich history."
+    },
+    {
+        "destination": "Tokyo",
+        "country": "Japan",
+        "reason": "The culture and technology."
+    },
+    {
+        "destination": "New York",
+        "country": "USA",
+        "reason": "Broadway and the Statue of Liberty."
+    }
+]
