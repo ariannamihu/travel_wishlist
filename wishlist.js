@@ -13,6 +13,7 @@ export async function fetchDestinations() {
           <p>${destination.country}</p>
           <p>${destination.reason}</p>
         `;
+<<<<<<< HEAD
         destinationList.appendChild(div);
       });
   
@@ -33,3 +34,17 @@ export async function fetchDestinations() {
     }
   }
   
+=======
+        destinationContainer.appendChild(card);
+    });
+    
+    window.addToWishlist = function(destinationName) {
+        const listItem = document.createElement("li");
+        listItem.classList.add("list-group-item");
+        listItem.textContent = destinationName;
+        wishlistContainer.appendChild(listItem);
+    };
+});
+   
+
+>>>>>>> 09c4973574548f613e6f16c90dc06ce8f6805958
