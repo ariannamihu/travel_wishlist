@@ -1,7 +1,7 @@
-const pexelsApiKey = "JMXTsU7ypc7hOg1U3PPTiwrhJz8eHazFoh0JTKxXOrrmJIWuLCDzEaek"; // Replace with your API key
+const pexelsApiKey = "JMXTsU7ypc7hOg1U3PPTiwrhJz8eHazFoh0JTKxXOrrmJIWuLCDzEaek"; 
 
 async function fetchDestination(cityName) {
-    const username = "ariannamihu"; // Replace with your GeoNames username
+    const username = "ariannamihu";
     const url = `http://api.geonames.org/searchJSON?q=${cityName}&maxRows=1&username=${username}`;
 
     try {
@@ -15,7 +15,6 @@ async function fetchDestination(cityName) {
             const place = data.geonames[0];
             displayDestination(place);
 
-            // 🔹 Fetch & Display Image AFTER getting city name
             fetchCityImage(place.name);
         } else {
             console.log("No results found.");
@@ -25,7 +24,6 @@ async function fetchDestination(cityName) {
     }
 }
 
-// 🔹 Fetch city image from Pexels API
 async function fetchCityImage(cityName) {
     const url = `https://api.pexels.com/v1/search?query=${cityName}&per_page=1`;
 
@@ -40,7 +38,6 @@ async function fetchCityImage(cityName) {
         if (data.photos.length > 0) {
             const imgUrl = data.photos[0].src.medium;
             
-            // 🔹 Append image below the existing destination info
             document.getElementById("results").innerHTML += `
                 <img src="${imgUrl}" alt="${cityName}" style="width:100%; max-width:600px; margin-top:10px;">
             `;
@@ -52,7 +49,6 @@ async function fetchCityImage(cityName) {
     }
 }
 
-// 🔹 Display destination details
 function displayDestination(place) {
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = `

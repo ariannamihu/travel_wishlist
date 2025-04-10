@@ -7,7 +7,6 @@
   <link rel="icon" type="image/x-icon" href="/images/Pictogrammers-Material-Island.512.png">
   
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  
   <link rel="stylesheet" href="wishlist.css" />
 </head>
 <body>
@@ -51,12 +50,19 @@
       <h2>Where I Want to Go</h2>
       <div class="destination-list" aria-live="polite"></div>
     </section>
+
+    <section class="search-section mt-5">
+      <h2>Search for a City</h2>
+      <input type="text" id="cityInput" placeholder="Enter a city name" class="form-control mb-2" />
+      <button onclick="searchCity()" class="btn btn-primary">Search</button>
+      <div id="results" class="mt-3"></div>
+    </section>
   </main>
 
   <div id="thank-you-message" class="hidden" role="alert">Thanks for submitting!</div>
 
-]  <footer>
-    <p>&copy; 2025</p>
+  <footer class="text-center mt-4">
+    <p>&copy; 2025 Travel Wishlist</p>
   </footer>
 
   <script type="module" src="app.js"></script>
@@ -68,5 +74,13 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+  <script>
+    function searchCity() {
+      const city = document.getElementById("cityInput").value;
+      fetchDestination(city);
+    }
+  </script>
+
 </body>
 </html>
+
