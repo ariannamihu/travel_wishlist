@@ -2,7 +2,7 @@ const pexelsApiKey = "JMXTsU7ypc7hOg1U3PPTiwrhJz8eHazFoh0JTKxXOrrmJIWuLCDzEaek";
 
 async function fetchDestination(cityName) {
     const username = "ariannamihu";
-    const url = `http://api.geonames.org/searchJSON?q=${cityName}&maxRows=1&username=${username}`;
+    const url = `https://api.geonames.org/searchJSON?q=${cityName}&maxRows=1&username=${username}`;
 
     try {
         const response = await fetch(url);
